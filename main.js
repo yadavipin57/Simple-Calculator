@@ -22,7 +22,7 @@ document.addEventListener('keydown', (e) => {
     if (key === 'Backspace') {
       string = string.substring(0, string.length - 1);
     } else if (key === 'Enter') {
-      let result = eval(string);
+      let result = eval(string).toFixed(9);
       string = String(result);
       displayField.value = string;
       if (e.target.value === 'DE') {
@@ -41,7 +41,7 @@ document.addEventListener('keydown', (e) => {
 arr.forEach((num) => {
   num.addEventListener('click', (e) => {
     if (e.target.value === '=') {
-      let result = eval(string);
+      let result = eval(string).toFixed(9);
       string = String(result);
       displayField.value = string;
       if (e.target.value === 'DE') {
